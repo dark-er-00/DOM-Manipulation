@@ -2,29 +2,29 @@ const btn = document.getElementById("changeBtn");
 const name = document.getElementById("name");
 const course = document.getElementById("course");
 const pic = document.getElementById("profilePic");
-let original = true;
+let i = 0;
 
 btn.addEventListener("click", function () {
 
-    if (original === true ) {
+    if (i === 0) {
 
-        name.textContent = "Maria Santos";
+        name.textContent = "Hanni Pham";
         course.textContent = "BS Computer Science";
-        pic.src = "maria.jpeg";
+        pic.src = "Hanni.jpg";
 
         name.style.color = "blue";
         btn.textContent = "Back to Original";
-		original = false;
+		i = 1;
 
     } else {
 
-        name.textContent = "Juan Dela Cruz";
+        name.textContent = "Malupiton";
         course.textContent = "BS Information Technology";
-        pic.src = "juanito.jpeg";
+        pic.src = "Malupiton.jpg";
 
         name.style.color = "green";
         btn.textContent = "Change Profile";
-		original = true;
+		i = 0;
     }
 
 });
